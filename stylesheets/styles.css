@@ -1,1 +1,9 @@
 /* Put your CSS here */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 450px;
+    /*width: 500;  */
+  }
+  
