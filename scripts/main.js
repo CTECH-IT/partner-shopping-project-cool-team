@@ -26,6 +26,6 @@
         checkList.addRow.call(checkList, data);
     });
 
-    formHandler.addImputHandler(Validation.isCompanyEmail);
+    formHandler.addInputHandler(Validation.isCompanyEmail);
 
 })(window);
