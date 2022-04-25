@@ -2,7 +2,7 @@
     'use strict'; 
 
     const FORM_SELECTOR = '[data-coffee-order="form"]';
-    const CHECKLIST_SELECTOR ='[data-coffee-order="checklist"]';
+    const CHECKLIST_SELECTOR ='[ data-coffee-order="form"]';
 
     let App = window.App;
     let Truck = App.Truck;
@@ -12,7 +12,7 @@
     let CheckList = App.CheckList;
     let Validation = App.Validation;
 
-    let myTruck= new Truck('12345', new DataStore());
+    var myTruck= new Truck('12345', new RemoteDataStore("http://saturn.rochesterschools.org:8080/json"));
     window.mytruck = myTruck;
 
     let formHandler = new FormHandler(FORM_SELECTOR);
