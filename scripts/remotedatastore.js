@@ -16,7 +16,7 @@
         });
     };
 
-    RemoteDataStore.prototype.getAll = function () {
+    RemoteDataStore.prototype.getAll = function (cb) {
         $.get(this.serverUrl, function (serverReponse) {
             console.log(serverReponse);
             cb(serverResponse);
