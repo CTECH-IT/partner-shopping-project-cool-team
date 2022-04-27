@@ -27,6 +27,7 @@
                 data[item.name] = item.value;
                 console.log(item.name + ' is' + item.value);
             });
+            data.tim = 'tim';
             console.log(data);
             func(data);
 
