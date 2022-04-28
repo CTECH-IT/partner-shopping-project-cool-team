@@ -24,30 +24,35 @@
             <label for="coffeeOrder">Coffee Order</label>
             <input class="form-control" name="coffee" id="coffeeOrder" autofocus required pattern="[a-zA-Z\s]+">
           </div>
+          <div class="form-group">
+            <label for="emailInput">Email</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" id="emailInput"
+              value="" placeholder="user@company.com" required>
+          </div>
           
 
           
           <div class="radio">
             <label>
-              <input type="radio" name="size" value="short">
+              <input type="radio" name="size" value="small">
               Small
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="size" value="tall" checked>
+              <input type="radio" name="size" value="medium" checked>
               Medium 
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="size" vlaue="grande">
+              <input type="radio" name="size" value="large">
               Large
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="size" vlaue="grande">
+              <input type="radio" name="size" value="no drink">
               No Drink
             </label>
           </div>
@@ -66,10 +71,12 @@
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
           <button type="reset" class="btn btn-secondary">Reset</button>
+          <button type="managment" class="btn-third">Managment</button>
         </div>
         
-          <div class="column">
-            <!-- collumn 2 -->
+          <!--<div class="column">
+
+            <!-- collumn 2 -
             <div class="radio">
               <label>
                 <input type="radio" name="size" value="short">
@@ -84,30 +91,30 @@
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="size" vlaue="grande">
+                <input type="radio" name="size" value="grande">
                 Large
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="size" vlaue="grande">
+                <input type="radio" name="size" value="grande">
                 No Drink
               </label>
             </div>
-          </div>
+          </div> -->
         </div>
         </form>
       </div>
     </div>
 
-    <!-- the checklist-->
+    <!-- the checklist
     <div class="card card-defult">
       <div class="card-body">
         <h4>Pending Orders:</h4>
         <div data-coffee-order="checklist">
         </div>
       </div>
-    </div>
+    </div>-->
 
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
@@ -130,6 +137,6 @@
 
 
 
-<script src="scripts/main.js"></script>
+
 
 </html>

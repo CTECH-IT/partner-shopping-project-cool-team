@@ -51,6 +51,7 @@
             type: 'checkbox',
             value: coffeeOrder.emailAddress
         });
+        console.log(coffeeOrder.emailAddress)
 
 
         let discription = coffeeOrder.size + ' ';
@@ -64,7 +65,6 @@
         $label.append($checkbox);
         $label.append(discription);
         $div.append($label);
-
         this.$element = $div;
     }
 
