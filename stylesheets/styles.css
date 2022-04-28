@@ -3,7 +3,18 @@
     float: left;
     width: 50%;
     padding: 10px;
-    height: 490px;
+    height: 530px;
     /*width: 500;  */
   }
   
+  .GFG {
+    background-color: rgb(104, 104, 104);
+    border: 0px solid black;
+    color: rgb(255, 255, 255);
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 10px;
+    margin: 10px 30px;
+    cursor: pointer;
+}
