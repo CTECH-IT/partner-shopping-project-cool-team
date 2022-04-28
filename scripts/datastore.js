@@ -26,4 +26,4 @@
     App.DataStore = DataStore;
     window.App = App;
 
-})(window);s
+})(window);
