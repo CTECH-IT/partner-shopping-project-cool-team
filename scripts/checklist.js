@@ -13,7 +13,7 @@
     }
 
     //when the checkbox is clicked, get the email address from the row
-    // and then call the finction (func) tha tis passed in with the email as a paramenter
+    // and then call the finction (func) that is passed in with the email as a paramenter
     CheckList.prototype.addClickHandler = function (func) {
         this.$element.on('click', 'input', function (event) {
             var email = event.target.value;
