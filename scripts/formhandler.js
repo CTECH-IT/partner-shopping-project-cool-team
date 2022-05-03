@@ -24,11 +24,25 @@
             // copy all info from form into the data variable
             let data = {};
             $(this).serializeArray().forEach(function (item) {
+                if (data[item.name]) { //if there is already an item of that type, add the second to an array
+                    data[item.name] = [data[item.name]];
+                    data[item.name].push(item.value);
+                } else {
                 data[item.name] = item.value;
+                }
                 console.log(item.name + ' is' + item.value);
             });
             data.tim = 'tim';
             console.log(data);
+            if (data.snack[1]) { //if its an array, make it readable by rDS
+                data.snack = JSON.stringify(data.snack);
+            }
+            if (data.drink[1]) {
+                data.drink = JSON.stringify(data.drink);
+            }
+            if (data.candy[1]) {
+                data.candy = JSON.stringify(data.candy);
+            }
             func(data);
 
             this.reset();

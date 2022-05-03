@@ -61,7 +61,13 @@
         discription += coffeeOrder.coffee + ', ';
         discription += ' (' + coffeeOrder.emailAddress + ')';
         discription += ' [' + coffeeOrder.pop + coffeeOrder.drink + ']';
-        discription += ' [' + coffeeOrder.size + coffeeOrder.snack + ']';
+        console.log(coffeeOrder.snack);
+        /*add conditional*/ coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
+        coffeeOrder.snack.forEach(element => discription += ' ['  + element + ']'); //for each element of snack[], adds a description part for it
+        /*coffeeOrder.drink = JSON.parse(coffeeOrder.snack);
+        coffeeOrder.drink.forEach(element => discription += ' ['  + element + ']');
+        coffeeOrder.candy = JSON.parse(coffeeOrder.candy);
+        coffeeOrder.candy.forEach(element => discription += ' ['  + element + ']');*/
         discription += ' [' + coffeeOrder.candy + ']';
 
 
