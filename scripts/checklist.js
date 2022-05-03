@@ -60,7 +60,10 @@
         }
         discription += coffeeOrder.coffee + ', ';
         discription += ' (' + coffeeOrder.emailAddress + ')';
-        discription += ' [' + coffeeOrder.strength + 'x]';
+        discription += ' [' + coffeeOrder.pop + coffeeOrder.drink + ']';
+        discription += ' [' + coffeeOrder.size + coffeeOrder.snack + ']';
+        discription += ' [' + coffeeOrder.candy + ']';
+
 
         $label.append($checkbox);
         $label.append(discription);
