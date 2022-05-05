@@ -3,7 +3,14 @@
     float: left;
     width: 30%;
     padding: 10px;
-    height: 530px;
+    height: 550px;
+    /*width: 500;  */
+  }
+  .column2 {
+    float: left;
+    width: 99%;
+    padding: 10px;
+    height: 400px;
     /*width: 500;  */
   }
   
@@ -19,3 +26,8 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+  }
+}
