@@ -54,21 +54,21 @@
         console.log(coffeeOrder.emailAddress)
 
 
-        let discription = coffeeOrder.size + ' ';
+        let discription =   ' ';
         if (coffeeOrder.flavor) {
             discription += coffeeOrder.flavor + ' ';
         }
         discription += coffeeOrder.coffee + ', ';
         discription += ' (' + coffeeOrder.emailAddress + ')';
-        discription += ' [' + coffeeOrder.pop + coffeeOrder.drink + ']';
+        discription +=  coffeeOrder.pop + coffeeOrder.drink ;
         console.log(coffeeOrder.snack);
         /*add conditional*/ coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
-        coffeeOrder.snack.forEach(element => discription += ' ['  + element + ']'); //for each element of snack[], adds a description part for it
+        coffeeOrder.snack.forEach(element => discription +=    element  ); //for each element of snack[], adds a description part for it
         /*coffeeOrder.drink = JSON.parse(coffeeOrder.snack);
         coffeeOrder.drink.forEach(element => discription += ' ['  + element + ']');
         coffeeOrder.candy = JSON.parse(coffeeOrder.candy);
         coffeeOrder.candy.forEach(element => discription += ' ['  + element + ']');*/
-        discription += ' [' + coffeeOrder.candy + ']';
+        discription +=   coffeeOrder.candy ;
 
 
         $label.append($checkbox);
