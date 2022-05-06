@@ -13,7 +13,7 @@
     }
 
     //when the checkbox is clicked, get the email address from the row
-    // and then call the finction (func) tha tis passed in with the email as a paramenter
+    // and then call the finction (func) that is passed in with the email as a paramenter
     CheckList.prototype.addClickHandler = function (func) {
         this.$element.on('click', 'input', function (event) {
             var email = event.target.value;
@@ -60,7 +60,16 @@
         }
         discription += coffeeOrder.coffee + ', ';
         discription += ' (' + coffeeOrder.emailAddress + ')';
-        discription += ' [' + coffeeOrder.strength + 'x]';
+        discription += ' [' + coffeeOrder.pop + coffeeOrder.drink + ']';
+        console.log(coffeeOrder.snack);
+        /*add conditional*/ coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
+        coffeeOrder.snack.forEach(element => discription += ' ['  + element + ']'); //for each element of snack[], adds a description part for it
+        /*coffeeOrder.drink = JSON.parse(coffeeOrder.snack);
+        coffeeOrder.drink.forEach(element => discription += ' ['  + element + ']');
+        coffeeOrder.candy = JSON.parse(coffeeOrder.candy);
+        coffeeOrder.candy.forEach(element => discription += ' ['  + element + ']');*/
+        discription += ' [' + coffeeOrder.candy + ']';
+
 
         $label.append($checkbox);
         $label.append(discription);
