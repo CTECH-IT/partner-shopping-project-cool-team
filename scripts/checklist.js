@@ -59,17 +59,21 @@
             discription += coffeeOrder.flavor + ' ';
         }
         discription += coffeeOrder.coffee + ', ';
-        discription += ' (' + coffeeOrder.emailAddress + ')\n';
-        discription +=  coffeeOrder.pop + coffeeOrder.drink + '\n' ;
+        discription += ' (' + coffeeOrder.emailAddress + ')\n' + '<br>' ;
+        discription +=  coffeeOrder.pop + coffeeOrder.drink + '\n' + '<br>' ;
         discription += coffeeOrder.size ;
         console.log(coffeeOrder.snack);
-        /*add conditional*/ coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
-        coffeeOrder.snack.forEach(element => discription +=    element  ); //for each element of snack[], adds a description part for it
+        if (coffeeOrder.snack.includes('[')) { // if its an array, move out each element
+            coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
+            coffeeOrder.snack.forEach(element => discription += element + ' '); //for each element of snack[], adds a description part for it
+        } else { // if its a string (not array) then just add the description
+            discription += coffeeOrder.snack.replaceAll('"', '');
+        }
         /*coffeeOrder.drink = JSON.parse(coffeeOrder.snack);
         coffeeOrder.drink.forEach(element => discription += ' ['  + element + ']');
         coffeeOrder.candy = JSON.parse(coffeeOrder.candy);
         coffeeOrder.candy.forEach(element => discription += ' ['  + element + ']');*/
-        discription +=   coffeeOrder.candy ;
+        discription += '<br>' + coffeeOrder.candy ;
 
 
         $label.append($checkbox);
