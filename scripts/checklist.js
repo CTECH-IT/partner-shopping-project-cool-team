@@ -61,6 +61,7 @@
         discription += coffeeOrder.coffee + ', ';
         discription += ' (' + coffeeOrder.emailAddress + ')';
         discription +=  coffeeOrder.pop + coffeeOrder.drink ;
+        discription += coffeeOrder.size ;
         console.log(coffeeOrder.snack);
         /*add conditional*/ coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
         coffeeOrder.snack.forEach(element => discription +=    element  ); //for each element of snack[], adds a description part for it
