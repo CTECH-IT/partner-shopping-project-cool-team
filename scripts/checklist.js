@@ -59,8 +59,8 @@
             discription += coffeeOrder.flavor + ' ';
         }
         discription += coffeeOrder.coffee + ', ';
-        discription += ' (' + coffeeOrder.emailAddress + ')';
-        discription +=  coffeeOrder.pop + coffeeOrder.drink ;
+        discription += ' (' + coffeeOrder.emailAddress + ')\n';
+        discription +=  coffeeOrder.pop + coffeeOrder.drink + '\n' ;
         discription += coffeeOrder.size ;
         console.log(coffeeOrder.snack);
         /*add conditional*/ coffeeOrder.snack = JSON.parse(coffeeOrder.snack); //turns string into array
